@@ -1,15 +1,24 @@
 /*================================================================
- Explicit Data Fetching
-     Re-fetching all data each time someone types in the input field 
-   isn't optimal. Eventually, we will be confronted with rate limiting 
-   which returns an error instead of data.
+ Explicit Data Fetching Using Axios
+    
+   Task: 
+     Not all browser supports "fetch". 
 
-     To solve this problem, we will change the implementation details 
-  from implicit to explicit data (re-)fetching. In other words, 
-  the application will refetch data only if someone clicks a confirmation 
-  button.
+     One alternative is to substitute the native fetch API with a 
+   stable library like axios, which performs asynchronous requests 
+   to remote APIs. In this section, we will discover how to substitute 
+   a library -- a native API of the browser in this case -- with another 
+   library from the npm registry.
+   
+   Optional Hints Explicit Data Fetching Using Axios:
+     - run npm install axios in VSCode terminal
 
-   Task Explicit Data Fetching: 
+     - add import statement: 
+         import axios from 'axios'; 
+
+     - modify handleFetchStories;
+
+    Previous Task Explicit Data Fetching: 
        The server-side search executes every time a user types into 
    the input field. The new implementation should only execute a search 
    when a user clicks a confirmation button. As long as the button is 
